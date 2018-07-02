@@ -1,0 +1,6 @@
+<section class="search-league">
+  <input [(ngModel)]="searchedTerm" (keyup)="searchLeagueForTerm()" type="text" placeholder="Searched by league" />
+  <ul *ngIf="isLookingForALeague()">
+    <li *ngFor="let league of leagues" (click)="selectLeagueSuggestion(league)">{{league}}</li>
+  </ul>
+</section>

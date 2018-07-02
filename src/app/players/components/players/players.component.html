@@ -1,0 +1,9 @@
+<header>
+  <button (click)="goBack()">Back</button>
+  <h1>{{teamName}}</h1>
+</header>
+<ul>
+  <li *ngFor="let player of players">
+    <fdj-player [player]="player"></fdj-player>
+ </li>
+</ul>

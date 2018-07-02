@@ -1,0 +1,26 @@
+header {
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  position: absolute;
+  color: #38aaff;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+li {
+  display: block;
+  height: 100%;
+}
+
+@media (min-width: 576px){
+  li {
+    display: inline-block;
+  }
+}

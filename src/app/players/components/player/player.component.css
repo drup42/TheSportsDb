@@ -1,0 +1,40 @@
+.player {
+  display: block;
+  height: 100%;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  background-color: #eaf8ff;
+  font-style: italic;
+  color: rgb(124, 125, 119);
+}
+
+@media (min-width: 576px){
+  .player {
+    display: inline-block;
+    margin: 0.5rem;
+  }
+}
+
+.player img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+}
+
+.player .info {
+  padding: 1rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.player .info span {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.player .info .name {
+  font-weight: bolder;
+  font-style: normal;
+  color: black;
+}

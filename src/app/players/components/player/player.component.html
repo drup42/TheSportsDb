@@ -1,0 +1,10 @@
+<article class="player">
+  <img *ngIf="shouldDisplayThumbnail()" [src]="player.thumbnailUrl" (error)="disableThumbnail()"/>
+  <img *ngIf="shouldDisplayPicture()" [src]="player.pictureUrl" (error)="disablePicture()"/>
+  <div class="info">
+    <span class="name">{{player.fullName}}</span>
+    <span>{{player.position}}</span>
+    <span *ngIf="player.birthday">birthDate: {{player.birthday}}</span>
+    <span *ngIf="player.signingAmount">price: {{player.signingAmount}}</span>
+  </div>
+</article>

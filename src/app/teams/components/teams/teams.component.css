@@ -1,0 +1,21 @@
+.search-league {
+  margin: 1rem;
+}
+
+.list-teams {
+  text-align: center;
+}
+
+.team {
+  display: inline-block;
+}
+
+.team:hover {
+  cursor: pointer;
+}
+
+.team img {
+  width: 120px;
+  height: 120px;
+  margin: 1rem;
+}

@@ -1,0 +1,8 @@
+<header>
+  <fdj-search-league class="search-league" (selectLeague)="onLeagueSelection($event)"></fdj-search-league>
+</header>
+<ul class="list-teams">
+  <li *ngFor="let team of teams" class="team">
+    <img routerLink="/{{team.name}}/players" src="{{team.pictureUrl}}" />
+  </li>
+</ul>
