@@ -5,7 +5,7 @@
   <div class="info">
     <span class="name">{{player.fullName}}</span>
     <span>{{player.position}}</span>
-    <span *ngIf="player.birthday">birthDate: {{player.birthday}}</span>
-    <span *ngIf="player.signingAmount">price: {{player.signingAmount}}</span>
+    <span *ngIf="hasBirthDate()">birthDate: {{player.birthday}}</span>
+    <span *ngIf="hasSigningAmount()">price: {{player.signingAmount}}</span>
   </div>
 </article>

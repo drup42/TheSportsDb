@@ -37,4 +37,12 @@ export class PlayerComponent implements OnInit {
     this.hasValidThumbnail = false;
   }
 
+  hasBirthDate() {
+    return !!this.player.birthday;
+  }
+
+  hasSigningAmount() {
+    return !!this.player.signingAmount;
+  }
+
 }
