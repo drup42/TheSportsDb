@@ -1,6 +1,7 @@
 <article class="player">
   <img *ngIf="shouldDisplayPicture()" [src]="player.pictureUrl" (error)="disablePicture()"/>
   <img *ngIf="shouldDisplayThumbnail()" [src]="player.thumbnailUrl" (error)="disableThumbnail()"/>
+  <img *ngIf="shouldDisplayDefaultForMissingPicture()" src="assets/images/missing_profile.png" />
   <div class="info">
     <span class="name">{{player.fullName}}</span>
     <span>{{player.position}}</span>

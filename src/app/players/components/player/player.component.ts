@@ -17,20 +17,24 @@ export class PlayerComponent implements OnInit {
   ngOnInit() {
   }
 
-  shouldDisplayThumbnail(): boolean {
-    return this.hasValidThumbnail && !this.hasValidPicture;
-  }
-
   shouldDisplayPicture(): boolean {
     return this.hasValidPicture;
   }
 
-  disableThumbnail() {
-    this.hasValidThumbnail = false;
+  shouldDisplayThumbnail(): boolean {
+    return this.hasValidThumbnail && !this.hasValidPicture;
+  }
+
+  shouldDisplayDefaultForMissingPicture(): boolean {
+    return !this.hasValidThumbnail && !this.hasValidPicture;
   }
 
   disablePicture() {
     this.hasValidPicture = false;
+  }
+
+  disableThumbnail() {
+    this.hasValidThumbnail = false;
   }
 
 }
