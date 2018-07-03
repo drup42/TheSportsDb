@@ -9,8 +9,8 @@ import {Player} from '../../models/player';
 export class PlayerComponent implements OnInit {
 
   @Input() player: Player;
-  hasValidThumbnail = true;
   hasValidPicture = true;
+  hasValidThumbnail = true;
 
   constructor() { }
 
@@ -18,15 +18,15 @@ export class PlayerComponent implements OnInit {
   }
 
   shouldDisplayThumbnail(): boolean {
-    return this.hasValidThumbnail;
+    return this.hasValidThumbnail && !this.hasValidPicture;
   }
 
   shouldDisplayPicture(): boolean {
-    return this.hasValidPicture && !this.hasValidThumbnail;
+    return this.hasValidPicture;
   }
 
   disableThumbnail() {
-      this.hasValidThumbnail = false;
+    this.hasValidThumbnail = false;
   }
 
   disablePicture() {

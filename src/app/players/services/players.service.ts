@@ -15,7 +15,7 @@ export class PlayersService extends FdjApiService {
   getPlayersTeam(teamName: string): Observable<Player[]> {
     return this.httpClient.get(`${this.baseUrl}/${this.apiKey}/searchplayers.php?t=${teamName}`)
       .pipe(map((response: any) => response.player.map(
-        player => new Player(player.strPlayer, player.strPosition, player.dateBorn, player.strSigning, player.strThumb, player.strCutout)
+        player => new Player(player.strPlayer, player.strPosition, player.dateBorn, player.strSigning, player.strCutout, player.strThumb)
       )));
   }
 }
